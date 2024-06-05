@@ -1,0 +1,18 @@
+{
+    "City": [
+        {
+            "id": "687da7c4-eaba-411f-b00d-65c954eb2b8c",
+            "country_id": "04051500-051f-4e0f-97ba-e452cbb14d19",
+            "name": "Melbourne",
+            "created_at": 1715412378.488704,
+            "updated_at": 1715412378.488704
+        },
+        {
+            "id": "26c940c0-f4c8-4dd7-b12d-45a113d41099",
+            "country_id": "04051500-051f-4e0f-97ba-e452cbb14d19",
+            "name": "Sydney",
+            "created_at": 1715412378.488731,
+            "updated_at": 1715412378.488731
+        }
+    ]
+}

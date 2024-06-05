@@ -1,0 +1,28 @@
+{
+    "Place_to_Amenity": [
+        {
+            "place_id": "90c83333-35d4-4638-bdd8-1eceac56915e",
+            "amenity_id": "a34bb185-d6e7-4d78-a519-995c51ada64d"
+        },
+        {
+            "place_id": "90c83333-35d4-4638-bdd8-1eceac56915e",
+            "amenity_id": "7acf0975-1b7e-4f74-829e-bf35d1537246"
+        },
+        {
+            "place_id": "90c83333-35d4-4638-bdd8-1eceac56915e",
+            "amenity_id": "bf4efa5c-f488-45cb-9816-bbafd0fc5008"
+        },
+        {
+            "place_id": "cee845de-c341-4f5a-a0c5-2ca1f4c327b2",
+            "amenity_id": "a34bb185-d6e7-4d78-a519-995c51ada64d"
+        },
+        {
+            "place_id": "cee845de-c341-4f5a-a0c5-2ca1f4c327b2",
+            "amenity_id": "bf4efa5c-f488-45cb-9816-bbafd0fc5008"
+        },
+        {
+            "place_id": "a1a3d915-68c8-4771-9bf4-498b9ae62463",
+            "amenity_id": "69cf5e16-b2dc-4bec-ac39-991850fc946b"
+        }
+    ]
+}

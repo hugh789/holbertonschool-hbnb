@@ -1,0 +1,25 @@
+{
+    "Country": [
+        {
+            "id": "04051500-051f-4e0f-97ba-e452cbb14d19",
+            "name": "Australia",
+            "code": "AU",
+            "created_at": 1715412135.350238,
+            "updated_at": 1715412135.350238
+        },
+        {
+            "id": "16168846-2992-407a-ad15-3bbe906d2b75",
+            "name": "New Zealand",
+            "code": "NZ",
+            "created_at": 1715412194.926692,
+            "updated_at": 1715412194.926692
+        },
+        {
+            "id": "f9948747-3b60-419b-a92f-5ee31882a6d7",
+            "name": "USA",
+            "code": "US",
+            "created_at": 1715412248.735104,
+            "updated_at": 1715412248.735104
+        }
+    ]
+}

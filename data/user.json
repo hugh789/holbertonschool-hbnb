@@ -1,0 +1,22 @@
+{
+    "User": [
+        {
+            "id": "0215a722-a3fc-4f08-9120-f8621147f2be",
+            "first_name": "Clark",
+            "last_name": "Kent",
+            "email": "iluvsuperman@email.com",
+            "password": "1234",
+            "created_at": 1715563526.942737,
+            "updated_at": 1715563526.942737
+        },
+        {
+            "id": "460897e2-5953-40ea-8773-00a2851a1ba8",
+            "first_name": "Bruce",
+            "last_name": "Wayne",
+            "email": "batmanforever@email.com",
+            "password": "4321",
+            "created_at": 1715563526.942768,
+            "updated_at": 1715563526.942768
+        }
+    ]
+}

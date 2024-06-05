@@ -1,0 +1,28 @@
+{
+    "Amenity": [
+        {
+            "id": "a34bb185-d6e7-4d78-a519-995c51ada64d",
+            "name": "toilet",
+            "created_at": 1715564316.28423,
+            "updated_at": 1715564316.28423
+        },
+        {
+            "id": "69cf5e16-b2dc-4bec-ac39-991850fc946b",
+            "name": "tv",
+            "created_at": 1715564316.284361,
+            "updated_at": 1715564316.284361
+        },
+        {
+            "id": "7acf0975-1b7e-4f74-829e-bf35d1537246",
+            "name": "mini-bar",
+            "created_at": 1715564492.781085,
+            "updated_at": 1715564492.781085
+        },
+        {
+            "id": "bf4efa5c-f488-45cb-9816-bbafd0fc5008",
+            "name": "air-con",
+            "created_at": 1715564492.781194,
+            "updated_at": 1715564492.781194
+        }
+    ]
+}
