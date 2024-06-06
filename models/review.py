@@ -12,12 +12,18 @@ class Review():
         
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+        self.__place_id = ""
+        self.__user_id = ""
+        self.__rating = 0
+        self.__comment = ""
+
         # Setattr - only allow place_id, user_id, text
         if kwargs:
             for key, value in kwargs.items():
-                if key == "place_id" or key == "user_id" or key == "text":
+                if key == "place_id" or key == "user_id":
                     setattr(self, key, value)
-
+    
     @property
     def place_id(self):
         """Getter for private prop place_id"""
