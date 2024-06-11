@@ -3,7 +3,7 @@
 from datetime import datetime
 import uuid
 import re
-from data import country_data
+from data import place_data, user_data, city_data, review_data, place_to_amenity_data
 
 class Place():
     """Representation of a place"""

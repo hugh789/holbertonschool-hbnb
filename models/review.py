@@ -3,6 +3,7 @@
 from datetime import datetime
 import uuid
 import re
+from data import review_data
 
 class Review():
     """Representation of a review"""
