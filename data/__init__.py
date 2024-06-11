@@ -7,7 +7,7 @@ from data.file_storage import FileStorage
 storage = FileStorage()
 
 # check for TESTING=1 from command line
-# command to use: TESTING=1 python3 -m unittest discover
+# command to use: TESTING=1 python3 -m unittest discover (Crawls through the current directory and runs all the test files FROM "tests" folder; recursive function, only runs files in first level)
 is_testing = "TESTING" in os.environ and os.environ['TESTING'] == "1"
 
 country_data = storage.load_model_data('data/country_testing.json') if is_testing \
