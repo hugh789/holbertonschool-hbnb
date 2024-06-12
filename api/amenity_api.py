@@ -18,4 +18,4 @@ from data import (
 )
 
 
-amenity_blueprint = Blueprint('amenity_api', __name__)
+amenity_api = Blueprint('amenity_api', __name__)

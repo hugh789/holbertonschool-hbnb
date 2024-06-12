@@ -18,10 +18,10 @@ from data import (
 )
 
 
-review_blueprint = Blueprint('review_api', __name__)
+review_api = Blueprint('review_api', __name__)
 
 
-# @review_blueprint.route('/example/places_reviews')
+# @review_api.route('/example/places_reviews')
 # def example_places_reviews():
 #     """ prints out reviews of places """
 #     # return jsonify(review_data)
@@ -47,7 +47,7 @@ review_blueprint = Blueprint('review_api', __name__)
 #     return jsonify(reviewer_data)
 
 #reduntant?
-@review_blueprint.route('/reviews', methods=["GET"])
+@review_api.route('/reviews', methods=["GET"])
 def reviews_get():
     """return all reviews"""
     reviewer_data = {}
@@ -74,7 +74,7 @@ def reviews_get():
     return jsonify(reviewer_data)
 
 #Needs updating wrong path  - GET /places/{place_id}/reviews:
-@review_blueprint.route('/reviews/<place_id>', methods=['GET'])
+@review_api.route('/reviews/<place_id>', methods=['GET'])
 def reviews_specific_get(place_id):
     """returns specufued review of a place"""
 
@@ -103,7 +103,7 @@ def reviews_specific_get(place_id):
     return jsonify(reviewer_data)
 
 #Needs updating wrong path POST /places/{place_id}/reviews: Create a new review for a place.
-@review_blueprint.route('/reviews', methods=["POST"])
+@review_api.route('/reviews', methods=["POST"])
 def create_new_review():
     """create a new review"""
 
@@ -151,7 +151,7 @@ def create_new_review():
     return jsonify(attribs), 201
 
 # Should be: PUT /reviews/{review_id}: Update an existing review. 
-@review_blueprint.route('/reviews/<place_id>', methods=["PUT"])
+@review_api.route('/reviews/<place_id>', methods=["PUT"])
 def update_review(place_id):
     """update review from a sepcific place id"""
     if not request.json:
@@ -184,7 +184,7 @@ def update_review(place_id):
     return jsonify(attribs), 201
 
 # Should be: DELETE /reviews/{review_id}: Delete a specific
-@review_blueprint.route('/reviews/<place_id>', methods=["DELETE"])
+@review_api.route('/reviews/<place_id>', methods=["DELETE"])
 def delete_review(place_id):
     """delete a review of a place"""
 

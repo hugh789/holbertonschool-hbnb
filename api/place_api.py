@@ -18,16 +18,16 @@ from data import (
 )
 
 
-place_blueprint = Blueprint('place_api', __name__)
+place_api = Blueprint('place_api', __name__)
 
 
-@place_blueprint.route('/example/places_amenties_raw')
+@place_api.route('/example/places_amenties_raw')
 def example_places_amenities_raw():
     """ Prints out the raw data for relationships between places and their amenities """
     return jsonify(place_to_amenity_data)
 
 
-@place_blueprint.route('/example/places_amenties_prettified_example')
+@place_api.route('/example/places_amenties_prettified_example')
 def example_places_amenties_prettified():
     """ Prints out the relationships between places and their amenities using names """
 
