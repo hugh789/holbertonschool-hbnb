@@ -12,12 +12,12 @@ from models.review import Review
 from models.user import User
 
 # Import blueprints
-from ..api.user_api import user_blueprint
-from ..api.country_api import country_blueprint
-from ..api.city_api import city_blueprint
-from ..api.amenity_api import amenity_blueprint
-from ..api.place_api import place_blueprint
-from ..api.review_api import review_blueprint
+from api.user_api import user_blueprint
+from api.country_api import country_blueprint
+from api.city_api import city_blueprint
+from api.amenity_api import amenity_blueprint
+from api.place_api import place_blueprint
+from api.review_api import review_blueprint
 
 # Import data
 from data import (
