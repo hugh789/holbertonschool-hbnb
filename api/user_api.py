@@ -18,7 +18,7 @@ from data import (
 )
 
 # Define the blueprint for user_api
-user_blueprint = Blueprint('user api', __name__)
+user_blueprint = Blueprint('user api', __name__ )
 
 #GET /users: Retrieve a list of all users.
 @user_blueprint.route('/users', methods=["GET"])
