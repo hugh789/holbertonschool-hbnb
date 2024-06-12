@@ -46,7 +46,7 @@ review_blueprint = Blueprint('review_api', __name__)
 
 #     return jsonify(reviewer_data)
 
-
+#
 @review_blueprint.route('/reviews', methods=["GET"])
 def reviews_get():
     """return all reviews"""

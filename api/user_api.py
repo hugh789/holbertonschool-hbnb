@@ -20,7 +20,7 @@ from data import (
 # Define the blueprint for user_api
 user_blueprint = Blueprint('user api', __name__)
 
-
+#GET /users: Retrieve a list of all users.
 @user_blueprint.route('/users', methods=["GET"])
 def users_get():
     """ Get/return all users """
@@ -39,7 +39,7 @@ def users_get():
 
     return jsonify(users_info)
 
-
+#GET /users/{user_id}: Retrieve details of a specific user.
 @user_blueprint.route('/users/<user_id>', methods=["GET"])
 def users_specific_get(user_id):
     """ Get/return a specific user """
@@ -63,7 +63,7 @@ def users_specific_get(user_id):
 
     return jsonify(user_info)
 
-
+#POST /users: Create a new user.
 @user_blueprint.route('/users', methods=["POST"])
 def create_new_user():
     """ Create a new user """
@@ -124,7 +124,7 @@ def create_new_user():
 
     return jsonify(attribs), 201
 
-
+# PUT /users/{user_id}: Update an existing user.
 @user_blueprint.route('/users/<user_id>', methods=["PUT"])
 def update_user(user_id):
     """ updates existing user data using specified id """
@@ -169,7 +169,7 @@ def update_user(user_id):
     # Return JSON response with updated user attributes
     return jsonify(attribs), 200
 
-
+#DELETE /users/{user_id}: Delete a user.
 @user_blueprint.route('/users/<user_id>', methods=["DELETE"])  
 def delete_user(user_id):
     """ Delete a user using the specified id """
