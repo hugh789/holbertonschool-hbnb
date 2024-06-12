@@ -52,7 +52,7 @@ def example_cities():
     
     return cities_list
 
-
+# GET /countries/{country_code}/cities: Retrieve all cities belonging to a specific country.
 @city_blueprint.route('countries/<country_code>/cities', methods=['GET'])
 def countries_cities(country_code):
     """ Return a list of cities in a country """

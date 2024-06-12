@@ -26,7 +26,7 @@ def example_country_data():
     """ Example to show that we can view data loaded in the data module's init """
     return jsonify(country_data)
 
-
+#GET /countries: Retrieve all pre-loaded countries.
 @country_blueprint.route('/countries', methods=["GET"])
 def countries_get():
     """ returns all countires data """
@@ -43,7 +43,7 @@ def countries_get():
 
     return jsonify(countries_info)
 
-
+#GET /countries/{country_code}: Retrieve details of a specific country by its code.
 @country_blueprint.route('/countries/<country_code>', methods=["GET"])
 def countries_specific_get(country_code):
     """ returns specific country data """
@@ -109,14 +109,9 @@ def create_new_country():
         return jsonify(attribs), 201
     
 
-    @country_blueprint.route('/countries/<country_code>', methods=["PUT"])
+@country_blueprint.route('/countries/<country_code>', methods=["PUT"])
     def update_country(country_code):
         """" updates existing user data using specified id """
-        # -- Usage example --
-        # curl -X PUT [URL] /
-        #    -H "Content-Type: application/json" /
-        #    -d '{"key1":"value1","key2":"value2"}'
-    if not request.json:
         abort(400, "Not a JSON")
 
     new_data = request.get_json()

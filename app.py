@@ -12,12 +12,12 @@ from models.review import Review
 from models.user import User
 
 # Import blueprints
-from api.user_api import user_blueprint
-from api.country_api import country_blueprint
-from api.city_api import city_blueprint
-from api.amenity_api import amenity_blueprint
-from api.place_api import place_blueprint
-from api.review_api import review_blueprint
+from ..api.user_api import user_blueprint
+from ..api.country_api import country_blueprint
+from ..api.city_api import city_blueprint
+from ..api.amenity_api import amenity_blueprint
+from ..api.place_api import place_blueprint
+from ..api.review_api import review_blueprint
 
 # Import data
 from data import (
@@ -28,13 +28,13 @@ from data import (
 # Initialize Flask app
 app = Flask(__name__)
 
-# Register blueprints
-app.register_blueprint(user_blueprint, url_prefix='/api/v1/')
-app.register_blueprint(country_blueprint, url_prefix='/api/v1/')
-app.register_blueprint(city_blueprint, url_prefix='/api/v1/')
-app.register_blueprint(amenity_blueprint, url_prefix='/api/v1/')
-app.register_blueprint(place_blueprint, url_prefix='/api/v1/')
-app.register_blueprint(review_blueprint, url_prefix='/api/v1/')
+# Register blueprints - updated to unique prefixes
+app.register_blueprint(user_blueprint, url_prefix='/api/v1/users')
+app.register_blueprint(country_blueprint, url_prefix='/api/v1/countries')
+app.register_blueprint(city_blueprint, url_prefix='/api/v1/cities')
+app.register_blueprint(amenity_blueprint, url_prefix='/api/v1/amenities')
+app.register_blueprint(place_blueprint, url_prefix='/api/v1/places')
+app.register_blueprint(review_blueprint, url_prefix='/api/v1/reviews')
 
 
 @app.route('/')
