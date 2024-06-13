@@ -56,3 +56,23 @@ class City():
             self.__country_id = value
         else:
             raise ValueError("Invalid country_id specified: {}".format(value))
+
+def save(self):
+        city_entry = {
+            'id': self.id,
+            'name': self.name,
+            'country_id': self.country_id,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at
+        }
+        file_path = 'data/city.json'
+        try:
+            with open(file_path, 'r') as file:
+                data = json.load(file)
+            data['City'].append(city_entry)
+            with open(file_path, 'w') as file:
+                json.dump(data, file, indent=4)
+            return True  # Indicate success
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            print(f"Error saving city entry: {e}")
+            return False  # Indicate failure
