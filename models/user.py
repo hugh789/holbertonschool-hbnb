@@ -3,6 +3,7 @@
 from datetime import datetime
 import uuid
 import re
+from pathlib import Path
 
 class User():
     """Representation of user """
@@ -26,6 +27,21 @@ class User():
             for key, value in kwargs.items():
                 if key == "first_name" or key == "last_name" or key == "email" or key == "password":
                     setattr(self, key, value)
+
+    
+# Automatically save user_data when a new user is created
+        self.save()
+
+    def save(self):
+        user_data = {
+            "id": self.id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "email": self.email,
+            "password": self.password,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at
+        }
 
     @property
     def first_name(self):

@@ -2,6 +2,7 @@
 
 from flask import Blueprint, jsonify, request, abort
 from datetime import datetime
+from pathlib import Path
 
 # Import Models
 from models.user import User
@@ -12,6 +13,7 @@ from models.city import City
 from models.amenity import Amenity
 
 # Import data
+from data import FileStorage
 from data import (
     country_data, place_data, amenity_data,
     place_to_amenity_data, review_data, user_data, city_data
@@ -27,7 +29,7 @@ def users_get():
 
     users_info = []
     for user_value in user_data.values():
-        user_info.append({
+        users_info.append({
             "id": user_value['id'],
             "first_name": user_value['first_name'],
             "last_name": user_value['last_name'],
@@ -121,7 +123,8 @@ def create_new_user():
             "created_at": datetime.fromtimestamp(new_user.created_at),
             "updated_at": datetime.fromtimestamp(new_user.updated_at)
         }
-
+        FileStorage.save_model_data("new_user_test.json", new_user)
+    
     return jsonify(attribs), 201
 
 # PUT /users/{user_id}: Update an existing user.
@@ -165,7 +168,9 @@ def update_user(user_id):
         "created_at": datetime.fromtimestamp(found_user_data["created_at"]),
         "updated_at": datetime.fromtimestamp(found_user_data["updated_at"])
     }
-
+    #Call static method to persist changes (assuming user_data is a dictionary)
+    FileStorage.save_model_data("testing.json", found_user_data)
+     
     # Return JSON response with updated user attributes
     return jsonify(attribs), 200
 

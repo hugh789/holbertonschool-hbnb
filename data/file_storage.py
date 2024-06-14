@@ -76,16 +76,17 @@ class FileStorage():
                 grouped_data[place_id].append(amenity_id)
 
         return grouped_data
-
-#Save data model from Abdu
- def save_model_data(self, filename, data):
+    
+    @staticmethod
+    def save_model_data(filename=None, data=None):
         """Save data to JSON file"""
+        if filename is None:
+            filename = "testing.json"
         if not isinstance(data, dict):
             raise ValueError("Data should be a dictionary")
 
         try:
-            with open(filename, 'a') as f:
+            with open(filename, 'w') as f:
                 json.dump(data, f)
         except IOError as exc:
             raise IOError(f"Unable to save data to file '{filename}'") from exc
-        

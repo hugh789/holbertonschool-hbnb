@@ -2,6 +2,7 @@
 
 from datetime import datetime
 from flask import Flask
+from pathlib import Path
 
 # Import blueprints
 from api.user_api import user_api
@@ -15,12 +16,12 @@ from api.review_api import review_api
 app = Flask(__name__)
 
 # Register blueprints - updated to unique prefixes
-app.register_blueprint(user_api, url_prefix='/api/v1/users')
-app.register_blueprint(country_api, url_prefix='/api/v1/countries')
-app.register_blueprint(city_api, url_prefix='/api/v1/cities')
-app.register_blueprint(amenity_api, url_prefix='/api/v1/amenities')
-app.register_blueprint(place_api, url_prefix='/api/v1/places')
-app.register_blueprint(review_api, url_prefix='/api/v1/reviews')
+app.register_blueprint(user_api, url_prefix='/api/v1')
+app.register_blueprint(country_api, url_prefix='/api/v1')
+app.register_blueprint(city_api, url_prefix='/api/v1')
+app.register_blueprint(amenity_api, url_prefix='/api/v1')
+app.register_blueprint(place_api, url_prefix='/api/v1')
+app.register_blueprint(review_api, url_prefix='/api/v1')
 
 # Set debug=True for the server to auto-reload when there are changes
 if __name__ == '__main__':
