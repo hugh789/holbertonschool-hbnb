@@ -26,7 +26,7 @@ from utils import pretty_json
 country_api = Blueprint('country_api', __name__)
 
 
- Examples
+# Examples
 @country_api.route('/example/country_data')
 def example_country_data():
     """ Example to show that we can view data loaded in the data module's init """
